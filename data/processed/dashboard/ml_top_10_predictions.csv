@@ -1,0 +1,160 @@
+Factor,Factor_Label,Relative_Position,Factor_Value,Predicted_Exam_Score
+Attendance,Attendance,0.0,60,63.31279927099236
+Attendance,Attendance,2.5,61,63.51156417652654
+Attendance,Attendance,5.0,62,63.710329082060724
+Attendance,Attendance,7.5,63,63.909093987594915
+Attendance,Attendance,10.0,64,64.1078588931291
+Attendance,Attendance,12.5,65,64.30662379866328
+Attendance,Attendance,15.0,66,64.50538870419747
+Attendance,Attendance,17.5,67,64.70415360973166
+Attendance,Attendance,20.0,68,64.90291851526585
+Attendance,Attendance,22.5,69,65.10168342080004
+Attendance,Attendance,25.0,70,65.30044832633423
+Attendance,Attendance,27.5,71,65.49921323186842
+Attendance,Attendance,30.0,72,65.6979781374026
+Attendance,Attendance,32.5,73,65.89674304293679
+Attendance,Attendance,35.0,74,66.09550794847098
+Attendance,Attendance,37.5,75,66.29427285400516
+Attendance,Attendance,40.0,76,66.49303775953935
+Attendance,Attendance,42.5,77,66.69180266507354
+Attendance,Attendance,45.0,78,66.89056757060773
+Attendance,Attendance,47.5,79,67.0893324761419
+Attendance,Attendance,50.0,80,67.28809738167611
+Attendance,Attendance,52.5,81,67.48686228721029
+Attendance,Attendance,55.0,82,67.68562719274448
+Attendance,Attendance,57.5,83,67.88439209827867
+Attendance,Attendance,60.0,84,68.08315700381284
+Attendance,Attendance,62.5,85,68.28192190934703
+Attendance,Attendance,65.0,86,68.48068681488122
+Attendance,Attendance,67.5,87,68.67945172041541
+Attendance,Attendance,70.0,88,68.8782166259496
+Attendance,Attendance,72.5,89,69.07698153148378
+Attendance,Attendance,75.0,90,69.27574643701797
+Attendance,Attendance,77.5,91,69.47451134255216
+Attendance,Attendance,80.0,92,69.67327624808634
+Attendance,Attendance,82.5,93,69.87204115362053
+Attendance,Attendance,85.0,94,70.07080605915472
+Attendance,Attendance,87.5,95,70.2695709646889
+Attendance,Attendance,90.0,96,70.4683358702231
+Attendance,Attendance,92.5,97,70.66710077575728
+Attendance,Attendance,95.0,98,70.86586568129147
+Attendance,Attendance,97.5,99,71.06463058682566
+Attendance,Attendance,100.0,100,71.26339549235983
+Hours_Studied,Hours Studied,0.0,1,61.79653272753574
+Hours_Studied,Hours Studied,2.380952380952381,2,62.08954110266987
+Hours_Studied,Hours Studied,4.761904761904762,3,62.38254947780402
+Hours_Studied,Hours Studied,7.142857142857143,4,62.67555785293816
+Hours_Studied,Hours Studied,9.523809523809524,5,62.96856622807229
+Hours_Studied,Hours Studied,11.904761904761905,6,63.26157460320645
+Hours_Studied,Hours Studied,14.285714285714286,7,63.554582978340584
+Hours_Studied,Hours Studied,16.666666666666668,8,63.84759135347472
+Hours_Studied,Hours Studied,19.047619047619047,9,64.14059972860886
+Hours_Studied,Hours Studied,21.428571428571427,10,64.433608103743
+Hours_Studied,Hours Studied,23.80952380952381,11,64.72661647887715
+Hours_Studied,Hours Studied,26.19047619047619,12,65.01962485401128
+Hours_Studied,Hours Studied,28.571428571428573,13,65.31263322914542
+Hours_Studied,Hours Studied,30.952380952380953,14,65.60564160427955
+Hours_Studied,Hours Studied,33.333333333333336,15,65.8986499794137
+Hours_Studied,Hours Studied,35.714285714285715,16,66.19165835454784
+Hours_Studied,Hours Studied,38.095238095238095,17,66.48466672968198
+Hours_Studied,Hours Studied,40.476190476190474,18,66.77767510481611
+Hours_Studied,Hours Studied,42.857142857142854,19,67.07068347995026
+Hours_Studied,Hours Studied,45.23809523809524,20,67.3636918550844
+Hours_Studied,Hours Studied,47.61904761904762,21,67.65670023021853
+Hours_Studied,Hours Studied,50.0,22,67.94970860535268
+Hours_Studied,Hours Studied,52.38095238095238,23,68.2427169804868
+Hours_Studied,Hours Studied,54.76190476190476,24,68.53572535562095
+Hours_Studied,Hours Studied,57.142857142857146,25,68.8287337307551
+Hours_Studied,Hours Studied,59.523809523809526,26,69.12174210588923
+Hours_Studied,Hours Studied,61.904761904761905,27,69.41475048102338
+Hours_Studied,Hours Studied,64.28571428571429,28,69.70775885615751
+Hours_Studied,Hours Studied,66.66666666666667,29,70.00076723129165
+Hours_Studied,Hours Studied,69.04761904761905,30,70.29377560642578
+Hours_Studied,Hours Studied,71.42857142857143,31,70.58678398155993
+Hours_Studied,Hours Studied,73.80952380952381,32,70.87979235669407
+Hours_Studied,Hours Studied,76.19047619047619,33,71.1728007318282
+Hours_Studied,Hours Studied,78.57142857142857,34,71.46580910696235
+Hours_Studied,Hours Studied,80.95238095238095,35,71.7588174820965
+Hours_Studied,Hours Studied,83.33333333333333,36,72.05182585723063
+Hours_Studied,Hours Studied,85.71428571428571,37,72.34483423236476
+Hours_Studied,Hours Studied,88.0952380952381,38,72.63784260749891
+Hours_Studied,Hours Studied,90.47619047619048,39,72.93085098263305
+Hours_Studied,Hours Studied,100.0,43,74.1028844831696
+Previous_Scores,Previous Scores,0.0,50,66.13577496902262
+Previous_Scores,Previous Scores,2.0,51,66.184777144647
+Previous_Scores,Previous Scores,4.0,52,66.23377932027138
+Previous_Scores,Previous Scores,6.0,53,66.28278149589576
+Previous_Scores,Previous Scores,8.0,54,66.33178367152016
+Previous_Scores,Previous Scores,10.0,55,66.38078584714454
+Previous_Scores,Previous Scores,12.0,56,66.42978802276892
+Previous_Scores,Previous Scores,14.0,57,66.4787901983933
+Previous_Scores,Previous Scores,16.0,58,66.5277923740177
+Previous_Scores,Previous Scores,18.0,59,66.57679454964206
+Previous_Scores,Previous Scores,20.0,60,66.62579672526645
+Previous_Scores,Previous Scores,22.0,61,66.67479890089083
+Previous_Scores,Previous Scores,24.0,62,66.72380107651522
+Previous_Scores,Previous Scores,26.0,63,66.7728032521396
+Previous_Scores,Previous Scores,28.0,64,66.82180542776399
+Previous_Scores,Previous Scores,30.0,65,66.87080760338837
+Previous_Scores,Previous Scores,32.0,66,66.91980977901274
+Previous_Scores,Previous Scores,34.0,67,66.96881195463713
+Previous_Scores,Previous Scores,36.0,68,67.01781413026153
+Previous_Scores,Previous Scores,38.0,69,67.0668163058859
+Previous_Scores,Previous Scores,40.0,70,67.11581848151027
+Previous_Scores,Previous Scores,42.0,71,67.16482065713465
+Previous_Scores,Previous Scores,44.0,72,67.21382283275905
+Previous_Scores,Previous Scores,46.0,73,67.26282500838342
+Previous_Scores,Previous Scores,48.0,74,67.31182718400781
+Previous_Scores,Previous Scores,50.0,75,67.3608293596322
+Previous_Scores,Previous Scores,52.0,76,67.40983153525657
+Previous_Scores,Previous Scores,54.0,77,67.45883371088095
+Previous_Scores,Previous Scores,56.0,78,67.50783588650533
+Previous_Scores,Previous Scores,58.0,79,67.55683806212973
+Previous_Scores,Previous Scores,60.0,80,67.6058402377541
+Previous_Scores,Previous Scores,62.0,81,67.65484241337849
+Previous_Scores,Previous Scores,64.0,82,67.70384458900288
+Previous_Scores,Previous Scores,66.0,83,67.75284676462725
+Previous_Scores,Previous Scores,68.0,84,67.80184894025165
+Previous_Scores,Previous Scores,70.0,85,67.85085111587603
+Previous_Scores,Previous Scores,72.0,86,67.8998532915004
+Previous_Scores,Previous Scores,74.0,87,67.94885546712479
+Previous_Scores,Previous Scores,76.0,88,67.99785764274918
+Previous_Scores,Previous Scores,78.0,89,68.04685981837356
+Previous_Scores,Previous Scores,80.0,90,68.09586199399794
+Previous_Scores,Previous Scores,82.0,91,68.14486416962232
+Previous_Scores,Previous Scores,84.0,92,68.1938663452467
+Previous_Scores,Previous Scores,86.0,93,68.2428685208711
+Previous_Scores,Previous Scores,88.0,94,68.29187069649547
+Previous_Scores,Previous Scores,90.0,95,68.34087287211985
+Previous_Scores,Previous Scores,92.0,96,68.38987504774424
+Previous_Scores,Previous Scores,94.0,97,68.43887722336862
+Previous_Scores,Previous Scores,96.0,98,68.487879398993
+Previous_Scores,Previous Scores,98.0,99,68.53688157461738
+Previous_Scores,Previous Scores,100.0,100,68.58588375024178
+Access_to_Resources,Access to Resources,0.0,Low,66.19315140063186
+Access_to_Resources,Access to Resources,50.0,Medium,67.26040075143926
+Access_to_Resources,Access to Resources,100.0,High,68.29330448404684
+Parental_Involvement,Parental Involvement,0.0,Low,66.31080497084244
+Parental_Involvement,Parental Involvement,50.0,Medium,67.24239964251501
+Parental_Involvement,Parental Involvement,100.0,High,68.31369021493197
+Tutoring_Sessions,Tutoring Sessions,0.0,0,66.61896375397677
+Tutoring_Sessions,Tutoring Sessions,12.5,1,67.12706747917777
+Tutoring_Sessions,Tutoring Sessions,25.0,2,67.63517120437878
+Tutoring_Sessions,Tutoring Sessions,37.5,3,68.14327492957979
+Tutoring_Sessions,Tutoring Sessions,50.0,4,68.6513786547808
+Tutoring_Sessions,Tutoring Sessions,62.5,5,69.15948237998181
+Tutoring_Sessions,Tutoring Sessions,75.0,6,69.66758610518282
+Tutoring_Sessions,Tutoring Sessions,87.5,7,70.17568983038382
+Tutoring_Sessions,Tutoring Sessions,100.0,8,70.68379355558484
+Parental_Education_Level,Parental Education Level,0.0,High School,67.02773097352465
+Parental_Education_Level,Parental Education Level,50.0,College,67.4923572037041
+Parental_Education_Level,Parental Education Level,100.0,Postgraduate,68.00282339898285
+Family_Income,Family Income,0.0,Low,66.9588043275241
+Family_Income,Family Income,50.0,Medium,67.42837357126567
+Family_Income,Family Income,100.0,High,68.0667739028273
+Motivation_Level,Motivation Level,0.0,Low,66.898483574971
+Motivation_Level,Motivation Level,50.0,Medium,67.39048411014706
+Motivation_Level,Motivation Level,100.0,High,67.94145530216623
+Peer_Influence,Peer Influence,0.0,Negative,66.73907505057457
+Peer_Influence,Peer Influence,50.0,Neutral,67.30347529167547
+Peer_Influence,Peer Influence,100.0,Positive,67.78862314001172

@@ -259,6 +259,20 @@ the processed dataset.
 Descriptive statistics and visualisations examine distributions,
 variation and relationships between variables.
 
+#### Understanding the starting point
+
+Before exploring why exam scores differ, we first need to
+understand how those scores are distributed. An overall average
+provides a useful summary, but it does not show how closely
+students cluster around it or how common unusually high and
+low scores are.
+
+![Distribution of student exam scores](visualisations/exam_score_distribution.png)
+
+This chart provides context for the analysis that follows:
+how do study habits, attendance and educational support relate
+to the variation in exam performance?
+
 Pearson correlations summarise pairwise linear relationships.
 Attendance and Hours Studied have correlations with Exam Score
 of approximately **0.58** and **0.45**, respectively.

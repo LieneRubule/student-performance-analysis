@@ -388,6 +388,23 @@ Four cards display the unfiltered reference values:
 | Average Attendance | 80.0% |
 | Average Study Hours | 20.0 |
 
+The overview gives the school leadership team a starting point:
+what does performance look like across these 6,607 student records,
+and which patterns deserve a closer look?
+
+![Student performance dashboard overview](visualisations/Student_Performance_Overview.png)
+
+The summary cards establish the overall picture. The attendance
+chart then compares average exam scores alongside student counts,
+helping readers see both the pattern and how many records
+contribute to it.
+
+The model-importance chart provides a different perspective:
+which factors does the prediction model rely on most?
+Together, these visuals guide the reader from a broad overview
+towards more focused questions about attendance, learning
+resources and student support.
+
 The page also contains:
 
 - A combination chart of average exam score and student count

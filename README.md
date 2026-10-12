@@ -132,6 +132,8 @@ The model includes Attendance, Hours Studied and Previous Scores.
 associated with approximately **1.99 additional exam-score
 points**, accounting for the other variables in the model.
 
+![Attendance and exam performance finding](visualisations/H1_Attendence.png)
+
 ### H2 — Tutoring and Previous Scores
 
 **Hypothesis:** The association between tutoring sessions and

@@ -1,0 +1,50 @@
+Row_Factor,Column_Factor,Correlation
+Hours Studied,Hours Studied,1.0
+Attendance,Hours Studied,-0.009907859200133592
+Sleep Hours,Hours Studied,0.010976689296114152
+Previous Scores,Hours Studied,0.02484578206796134
+Tutoring Sessions,Hours Studied,-0.014282264334903238
+Physical Activity,Hours Studied,0.0046243902725861
+Exam Score,Hours Studied,0.44545495407528174
+Hours Studied,Attendance,-0.009907859200133592
+Attendance,Attendance,1.0
+Sleep Hours,Attendance,-0.015917825765680738
+Previous Scores,Attendance,-0.0201861029599873
+Tutoring Sessions,Attendance,0.014323509499262671
+Physical Activity,Attendance,-0.02243470270349264
+Exam Score,Attendance,0.5810718633120632
+Hours Studied,Sleep Hours,0.010976689296114152
+Attendance,Sleep Hours,-0.015917825765680738
+Sleep Hours,Sleep Hours,1.0
+Previous Scores,Sleep Hours,-0.021750343098425513
+Tutoring Sessions,Sleep Hours,-0.012216112032957426
+Physical Activity,Sleep Hours,-0.00037806520293003277
+Exam Score,Sleep Hours,-0.017021628571502398
+Hours Studied,Previous Scores,0.02484578206796134
+Attendance,Previous Scores,-0.0201861029599873
+Sleep Hours,Previous Scores,-0.021750343098425513
+Previous Scores,Previous Scores,1.0
+Tutoring Sessions,Previous Scores,-0.013122325694712519
+Physical Activity,Previous Scores,-0.011273733910109109
+Exam Score,Previous Scores,0.17507908702291072
+Hours Studied,Tutoring Sessions,-0.014282264334903238
+Attendance,Tutoring Sessions,0.014323509499262671
+Sleep Hours,Tutoring Sessions,-0.012216112032957426
+Previous Scores,Tutoring Sessions,-0.013122325694712519
+Tutoring Sessions,Tutoring Sessions,1.0
+Physical Activity,Tutoring Sessions,0.017732945340729694
+Exam Score,Tutoring Sessions,0.1565251853922526
+Hours Studied,Physical Activity,0.0046243902725861
+Attendance,Physical Activity,-0.02243470270349264
+Sleep Hours,Physical Activity,-0.00037806520293003277
+Previous Scores,Physical Activity,-0.011273733910109109
+Tutoring Sessions,Physical Activity,0.017732945340729694
+Physical Activity,Physical Activity,1.0
+Exam Score,Physical Activity,0.027824436180257393
+Hours Studied,Exam Score,0.44545495407528174
+Attendance,Exam Score,0.5810718633120632
+Sleep Hours,Exam Score,-0.017021628571502398
+Previous Scores,Exam Score,0.17507908702291072
+Tutoring Sessions,Exam Score,0.1565251853922526
+Physical Activity,Exam Score,0.027824436180257393
+Exam Score,Exam Score,1.0

@@ -1,219 +1,162 @@
-# Data Dictionary, Provenance and Limitations
+# Data Dictionary and Dataset Limitations
 
-## Dataset Overview
+## 1. Dataset Source
 
-This project uses the Student Performance Factors dataset,
-published on Kaggle by `lainguyn123`.
+This project uses **Student Performance Factors**, published
+on Kaggle by `lainguyn123`.
 
-- Source: https://www.kaggle.com/datasets/lainguyn123/student-performance-factors
-- Project dataset: 6,607 records and 20 original columns.
-- Unit of analysis: one student record.
-- Outcome variable: `Exam_Score`.
-- Raw file: `data/raw/StudentPerformanceFactors.csv`.
-- Cleaned file: `data/processed/StudentPerformanceFactors_cleaned.csv`.
+Source: https://www.kaggle.com/datasets/lainguyn123/student-performance-factors
 
-The original columns comprise seven numerical variables and
+The project dataset contains 6,607 records and 20 original
+columns describing study habits, attendance, educational
+support, student characteristics and exam performance.
+
+- Raw file: `data/raw/StudentPerformanceFactors.csv`
+- Cleaned file: `data/processed/StudentPerformanceFactors_cleaned.csv`
+- Outcome variable: `Exam_Score`
+
+The column definitions below follow the publisher's
+**About Dataset** description.
+
+### How the Dataset Was Produced
+
+The supplied publisher description does not explain the
+collection or generation method, sampling process, location,
+collection dates or participating institutions.
+
+It also does not establish whether the records were collected
+from real students or generated synthetically. These details
+are therefore treated as unknown.
+
+Project cleaning and transformation steps are documented in
+the notebooks. The cleaned CSV is a project output, separate
+from the original downloaded file.
+
+## 2. Column Definitions
+
+| Column | Type | Description and units or categories |
+| --- | --- | --- |
+| Hours_Studied | Numerical | Hours spent studying per week. |
+| Attendance | Numerical | Percentage of classes attended. |
+| Parental_Involvement | Categorical, ordinal | Parental involvement in education: Low, Medium, High. |
+| Access_to_Resources | Categorical, ordinal | Availability of educational resources: Low, Medium, High. |
+| Extracurricular_Activities | Categorical, binary | Participation in extracurricular activities: Yes, No. |
+| Sleep_Hours | Numerical | Average hours of sleep per night. |
+| Previous_Scores | Numerical | Scores from previous exams; the grading scale is not specified. |
+| Motivation_Level | Categorical, ordinal | Student motivation: Low, Medium, High. |
+| Internet_Access | Categorical, binary | Availability of internet access: Yes, No. |
+| Tutoring_Sessions | Numerical, count | Number of tutoring sessions attended per month. |
+| Family_Income | Categorical, ordinal | Family income level: Low, Medium, High. |
+| Teacher_Quality | Categorical, ordinal | Teacher quality: Low, Medium, High. |
+| School_Type | Categorical, nominal | School type: Public, Private. |
+| Peer_Influence | Categorical | Peer influence on academic performance: Positive, Neutral, Negative. |
+| Physical_Activity | Numerical | Average hours of physical activity per week. |
+| Learning_Disabilities | Categorical, binary | Recorded presence of learning disabilities: Yes, No. |
+| Parental_Education_Level | Categorical, ordinal | Highest parental education level: High School, College, Postgraduate. |
+| Distance_from_Home | Categorical, ordinal | Distance from home to school: Near, Moderate, Far. |
+| Gender | Categorical, nominal | Recorded gender: Male, Female. |
+| Exam_Score | Numerical | Final exam score, used as the prediction target; the grading scale is not specified. |
+
+The original dataset contains seven numerical variables and
 13 categorical variables.
 
-## Dataset Provenance
+The publisher does not specify monetary thresholds for income,
+distance thresholds, or how categories such as teacher quality
+and motivation were assessed.
 
-The dataset was obtained from Kaggle rather than collected
-directly for this project.
+Any grouped variables, encoded features or Power BI measures
+created during the project are derived fields rather than
+original dataset columns.
 
-The original collection or generation process has not been
-independently verified. The project does not establish the
-sampling method, collection dates, location, participating
-institutions or whether the records represent real students
-or were synthetically generated.
+## 3. Dataset and Analytical Limitations
 
-These uncertainties limit claims about representativeness.
-The dataset is used for educational analysis and modelling,
-not as verified evidence about a particular school population.
+### Unknown Representativeness
 
-The project's cleaning and preparation steps are documented
-in the notebooks. The processed CSV is a project output and
-should be distinguished from the original downloaded data.
+Without a documented sampling or generation process, it is
+not possible to establish which student population the data
+represents. Findings should not automatically be generalised
+to particular schools, countries or education systems.
 
-## Column Definitions
+### Broad Categories and Missing Context
 
-Units that have not been verified against the publisher's
-description are identified explicitly.
+Categories such as Low, Medium and High simplify complex
+characteristics and hide differences within each group.
 
-| Column | Type | Description | Units or categories |
-| --- | --- | --- | --- |
-| Hours_Studied | Numerical | Time spent studying. | Hours; reporting period requires source verification. |
-| Attendance | Numerical | Proportion of classes attended. | Percentage (%). |
-| Parental_Involvement | Categorical, ordinal | Recorded level of parental involvement in education. | Low, Medium, High. |
-| Access_to_Resources | Categorical, ordinal | Recorded availability of educational resources. | Low, Medium, High. |
-| Extracurricular_Activities | Categorical, binary | Whether the student participates in extracurricular activities. | No, Yes. |
-| Sleep_Hours | Numerical | Recorded duration of sleep. | Hours; reporting period requires source verification. |
-| Previous_Scores | Numerical | Recorded previous academic assessment score. | Score points; assessment and grading scale require verification. |
-| Motivation_Level | Categorical, ordinal | Recorded level of motivation. | Low, Medium, High. |
-| Internet_Access | Categorical, binary | Whether internet access is recorded as available. | No, Yes. |
-| Tutoring_Sessions | Numerical, count | Number of tutoring sessions attended. | Sessions; reporting period requires source verification. |
-| Family_Income | Categorical, ordinal | Recorded household income category. | Low, Medium, High; monetary thresholds are unverified. |
-| Teacher_Quality | Categorical, ordinal | Recorded teaching-quality category. | Low, Medium, High; rating method is unverified. |
-| School_Type | Categorical, nominal | Type of school attended. | Public, Private. |
-| Peer_Influence | Categorical | Recorded direction of peer influence. | Negative, Neutral, Positive. |
-| Physical_Activity | Numerical | Recorded amount of physical activity. | Measurement unit and reporting period require source verification. |
-| Learning_Disabilities | Categorical, binary | Whether a learning disability is recorded. | No, Yes; diagnostic criteria are unverified. |
-| Parental_Education_Level | Categorical, ordinal | Recorded parental education category. | High School, College, Postgraduate. |
-| Distance_from_Home | Categorical, ordinal | Recorded home-to-school distance category. | Near, Moderate, Far; distance thresholds are unverified. |
-| Gender | Categorical, nominal | Gender category recorded in the dataset. | Female, Male. |
-| Exam_Score | Numerical | Final exam score used as the outcome in this project. | Score points; the exact grading scheme requires verification. |
+The original columns do not include age, school year, exam
+subject, institution or collection date. These omissions
+limit contextual interpretation.
 
-Category labels describe how the dataset is encoded. They do
-not establish objective definitions of concepts such as
-motivation, teacher quality or parental involvement.
+### Data Quality and Cleaning
 
-## Original and Derived Variables
+Missing-value treatment and other cleaning decisions can
+affect distributions, associations and model results.
+The notebooks document the project's treatment of these issues.
 
-The table above describes the 20 original dataset columns.
+The analysis identified an Exam_Score value of 101. Because
+the publisher does not specify the grading scale, this value
+cannot be assumed invalid solely because it exceeds 100.
+Its treatment should follow the documented cleaning decision.
 
-Any grouped variables created during analysis, model-encoded
-features or Power BI measures are derived variables. Their
-definitions belong alongside the relevant transformation code.
+### Aggregation and Model Interpretation
 
-Display labels such as "Hours Studied" replace underscores for
-readability without changing the meaning of the original field.
+Averages can conceal variation between students. Deep
+decomposition-tree branches may describe small subgroups
+whose averages are less stable.
 
-## Data Quality and Limitations
+Pearson correlation measures linear relationships. Values
+near zero do not rule out non-linear relationships.
 
-### Missing Data and Cleaning
+Regression results depend on the model specification.
+Permutation importance measures a fitted model's dependence
+on predictors for its evaluation performance; it is not a
+percentage contribution to exam scores.
 
-Missing-value handling can change distributions, relationships
-and uncertainty estimates.
+### Association Does Not Prove Causation
 
-Imputed values are estimates rather than observed measurements.
-The cleaning notebook should be consulted for the exact columns,
-methods and number of affected records.
+Relationships in this dataset do not establish cause and effect.
 
-If missing outcome values are imputed, those outcomes should not
-be treated as equivalent to independently observed exam scores
-when assessing predictive performance.
+For example, higher attendance is associated with higher exam
+scores, but this does not prove that increasing attendance
+alone will produce the predicted score difference.
 
-### Uncertain Provenance
+Other factors may influence both variables. Adjusting for
+selected variables does not eliminate all possible confounding.
+The same caution applies to group comparisons, correlations
+and feature importance.
 
-The collection or generation process is not independently
-verified. Results cannot automatically be generalised to real
-students, specific countries or particular education systems.
+## 4. Ethical Considerations
 
-### Measurement and Category Definitions
+### Sensitive Information and Fairness
 
-Several variables use broad categories. These simplify complex
-characteristics and may conceal substantial differences within
-each group.
+Gender, family income and learning disabilities are potentially
+sensitive characteristics. Findings should not be used to
+stereotype students or justify discriminatory treatment.
 
-Unverified reporting periods and category thresholds restrict
-precise interpretation. For example, a tutoring-session count
-cannot be described as weekly or monthly without confirmation.
+The available categories are simplified. Binary gender and
+disability fields do not capture the full diversity of students
+or their support needs.
 
-### Score Validity
-
-The analysis has reported an Exam_Score value of 101.
-The grading scheme must be checked before assuming that scores
-are strictly bounded between 0 and 100.
-
-Unusual values should be documented and investigated rather
-than automatically removed or capped.
-
-### Missing Context
-
-The original columns do not identify student age, school year,
-exam subject, institution or collection date.
-
-These omissions limit comparisons and prevent assessment of
-some potentially important contextual differences.
-
-### Group Size and Aggregation
-
-Overall averages can conceal variation between students.
-Filters and deeper decomposition-tree branches may produce
-small subgroups whose averages are less stable.
-
-### Statistical and Model Limitations
-
-Pearson correlation describes pairwise linear relationships.
-A correlation close to zero does not rule out a non-linear
-relationship.
-
-Regression estimates depend on model assumptions and the
-variables included. Adjustment does not eliminate all possible
-confounding.
-
-Permutation importance measures the fitted model's dependence
-on a predictor for the selected evaluation metric. It is not
-a causal effect or a percentage contribution to exam scores.
-
-## Ethical Considerations
-
-### Sensitive Characteristics
-
-The dataset contains potentially sensitive information,
-including learning disabilities, gender and family income.
-
-These variables must not be used to label students as less
-capable or to justify discriminatory treatment.
-
-### Fairness and Representation
-
-The available categories may not represent the full diversity
-of students. For example, Gender contains only Female and Male,
-while Learning_Disabilities uses a simple Yes/No classification.
-
-A model's overall accuracy does not demonstrate equal performance
+Overall model performance does not establish equal accuracy
 across different student groups.
 
 ### Privacy
 
 The original columns contain no names or direct student
-identifiers. However, absence of direct identifiers does not
-prove that re-identification is impossible.
+identifiers. This alone does not guarantee that records could
+never be re-identified.
 
 The project does not attempt to identify individuals or link
 records to external personal information.
 
-### Appropriate Use
+### Responsible Use and Transparency
 
-This is an educational analysis project. Its results should not
-be used alone to determine admissions, grades, disciplinary
-actions or access to support.
+This project is intended for educational analysis. Its findings
+should not be used alone to make admissions, grading,
+disciplinary or support-allocation decisions.
 
-Any real-world use would require verified provenance,
-appropriate permissions, external validation and fairness
-assessment.
+Any real-world application would require verified provenance,
+appropriate permissions, external validation and fairness checks.
 
-### Transparency
-
-The project should acknowledge the dataset publisher, document
-cleaning decisions and distinguish observed values from
-estimated or model-predicted values.
-
-Results should be communicated with their limitations rather
-than presented as universal facts about students.
-
-## Associations Do Not Prove Cause and Effect
-
-An association means that variables vary together in this
-dataset. It does not establish that changing one variable
-will cause another to change.
-
-For example, higher attendance may be associated with higher
-exam scores. This does not prove that increasing attendance
-alone will produce the model's predicted score difference.
-
-Other factors may influence both attendance and exam performance.
-Statistical adjustment only accounts for the variables included
-in the model and does not establish causation.
-
-The same caution applies to correlations, differences between
-student groups and model feature importance.
-
-## Documentation Checks Still Required
-
-- Verify numerical units and reporting periods against the
-  publisher's data description.
-- Confirm any available information about data collection
-  or synthetic generation.
-- Check the grading scale and treatment of Exam_Score = 101.
-- Confirm that the cleaning description matches the notebook.
+The project credits the dataset publisher and documents its
+methods and limitations. Observed data, cleaned values and
+model predictions should be clearly distinguished.

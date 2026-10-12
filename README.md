@@ -4,9 +4,29 @@
 ![Code Institute logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 ![Student Performance Analysis banner](visualisations/student_performance_banner.jpg)
 
-# Student Performance Analysis
 ## Project Overview
 
+Imagine a school leadership team asking:
+**“What is associated with stronger exam results, and where
+should we focus further investigation to better support students?”**
+
+Attendance, study habits, tutoring and access to learning
+resources are all possible starting points. However, examining
+one factor alone may overlook differences in students’ previous
+performance or circumstances.
+
+Using a dataset of 6,607 student records, this project explores
+those questions through descriptive analysis, statistical testing
+and predictive modelling. It follows a journey from identifying
+patterns to examining selected relationships more closely,
+then presenting the findings in an interactive dashboard.
+
+The aim is to give education stakeholders a clearer starting
+point for evidence-informed discussion, while recognising that
+these findings describe associations rather than proving which
+interventions would improve results.
+
+## 
 Student Performance Analysis explores how study habits,
 attendance, educational support and student characteristics
 are associated with exam performance.
@@ -73,6 +93,24 @@ The project addresses the following analytical requirements:
 
 The intended audience includes educators, education
 stakeholders and non-technical readers.
+
+### Questions from an Education Stakeholder
+
+The analysis is guided by questions a school leadership
+team might ask:
+
+- **What stands out about exam performance across the dataset?**
+- **Is higher attendance associated with better exam results
+  when study hours and previous scores are considered?**
+- **Does the relationship between tutoring and exam scores
+  differ for students with different previous scores?**
+- **Are differences in access to learning resources associated
+  with exam scores after accounting for family income and
+  previous performance?**
+- **How accurately can we predict exam scores, and which
+  factors does the model rely on most?**
+- **What do the findings suggest we should investigate next
+  to better understand students’ support needs?**
 
 The analysis supports exploration and discussion. It is
 not a validated system for making decisions about individual

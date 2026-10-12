@@ -150,6 +150,8 @@ association varies with previous scores.
 The dashboard compares predicted scores at previous-score
 levels of **63, 75 and 88**.
 
+![Tutoring and previous scores finding](visualisations/H2_Tutoring.png)
+
 ### H3 — Access to Resources
 
 **Hypothesis:** Exam scores differ across resource-access
@@ -166,6 +168,8 @@ categorical predictor, with Low access as the reference group.
   exam-score points** than Low access.
 
 These estimates account for family income and previous scores.
+
+![Access to resources finding](visualisations/H3_Resources.png)
 
 ### Interpretation
 
@@ -261,6 +265,29 @@ of approximately **0.58** and **0.45**, respectively.
 
 These correlations do not account for other variables and
 should not be interpreted as adjusted effects.
+
+#### Where do the strongest patterns appear?
+
+For a school leadership team, an initial question is whether
+exam performance is more closely linked to classroom attendance,
+independent study or other recorded habits.
+
+![Correlations between numerical variables](visualisations/corelations.png)
+
+Attendance and study hours show the strongest positive
+correlations with exam scores among the numerical variables,
+at approximately **0.58** and **0.45**, respectively.
+
+This gives the investigation a starting point: students with
+higher attendance or more study hours tend to achieve higher
+scores in this dataset. However, these patterns alone cannot
+tell us whether attendance matters independently of study time
+and previous attainment.
+
+The H1 analysis addresses that next question by considering
+all three factors together. Its findings show that the positive
+attendance relationship remains after accounting for study
+hours and previous scores.
 
 ### Hypothesis Testing
 

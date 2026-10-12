@@ -273,6 +273,22 @@ This chart provides context for the analysis that follows:
 how do study habits, attendance and educational support relate
 to the variation in exam performance?
 
+#### Are more study hours associated with higher scores?
+
+A school leadership team might ask whether students who spend
+more time studying also tend to achieve higher exam scores.
+
+![Study hours and exam scores](visualisations/study_hours_vs_exam_score.png)
+
+Study hours and exam scores have a positive correlation of
+approximately **0.45** in this dataset. Students who study more
+tend to score higher, but study time alone does not fully explain
+differences in performance.
+
+This leads to a broader question: how do attendance, previous
+attainment and access to support relate to exam results
+alongside study time?
+
 Pearson correlations summarise pairwise linear relationships.
 Attendance and Hours Studied have correlations with Exam Score
 of approximately **0.58** and **0.45**, respectively.

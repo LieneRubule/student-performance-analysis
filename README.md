@@ -346,6 +346,24 @@ by 100 for the dashboard and labelled:
 Importance values do not represent causal effects, changes
 in student marks or percentages that must total 100.
 
+#### Which factors does the prediction model rely on?
+
+After examining individual relationships, the next question
+is how the available factors contribute to predicting exam
+scores together.
+
+![Linear regression feature importance](visualisations/ml_feature_importance.png)
+
+Permutation importance measures how much predictive performance
+drops when a predictor's values are shuffled. A larger decrease
+indicates that the fitted model relies more heavily on that
+factor for its predictions.
+
+For education stakeholders, this provides another way to
+identify factors worth investigating. It does not establish
+which intervention would improve results: being useful for
+prediction is different from demonstrating a causal effect.
+
 Model evaluation outputs are recorded in
 `jupyter_notebooks/Student_Performance_Machine_Learning.ipynb`.
 

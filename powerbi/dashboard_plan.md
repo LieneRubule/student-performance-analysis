@@ -1,185 +1,373 @@
-# Power BI Dashboard Plan
+# Dashboard Planning and Design
 
-## Purpose and Audience
+**Project:** Student Performance Analysis  
+**Dashboard file:** `powerbi/Student_Performance_Dashboard.pbix`  
+**Updated:** 12 October 2026
 
-The dashboard will help teachers and education support staff explore student performance and factors associated with exam scores.
+## Purpose
 
-It will use the cleaned dataset and present descriptive relationships. Associations will not be described as proof of cause and effect.
+The Power BI dashboard presents the student performance analysis
+across four pages. It combines summary measures, model feature
+importance, hypothesis findings, interactive group exploration
+and numerical correlations.
 
-## Visual Style and Navigation
+The report is designed to make the analysis understandable to
+users without requiring them to read the Python notebooks.
 
-- Light lavender page backgrounds with white chart panels.
-- Purple and teal as the main theme, with additional distinct colours for the six factor lines.
-- Rounded summary cards, dark readable text and consistent spacing.
-- Clear titles, labelled axes and short explanations.
-- Colour supported by labels and markers.
-- A navigation strip linking Overview, Attendance & Study, and Resources & Support.
-- Clearly visible filters and a Reset filters button on every page.
+## Report Structure
 
-## Stakeholder Questions and Visuals
-
-| Page | Stakeholder question | Planned visual |
-|---|---|---|
-| Overview | How many students are represented, and what are the overall averages? | Summary cards |
-| Overview | How are exam scores distributed? | Histogram |
-| Overview | What proportion of students attends each school type? | Donut chart |
-| Attendance & Study | How does attendance relate to exam performance? | Scatter plot |
-| Attendance & Study | How do numerical factor profiles differ across exam-score bands? | Multiple-factor line chart |
-| Resources & Support | How do average scores vary across combinations of family income and resource access? | Colour-shaded matrix |
-| Resources & Support | How do average scores and student counts vary by tutoring sessions? | Combination chart: columns and an overlapping line |
+| Page | Main content |
+| --- | --- |
+| Overview | Summary cards, attendance chart, feature importance and slicers |
+| Hypothesis Findings | Three bookmark-controlled hypothesis views |
+| Explore Performance | Interactive decomposition tree |
+| Correlations | Numerical correlation matrix with heatmap formatting |
 
 ## Page 1 — Overview
 
-### Layout Sketch
+**Page heading:** Student Performance Overview
 
-| Position | Planned content |
-|---|---|
-| Top | Title, introduction and navigation |
-| Filter row | Gender and School Type slicers; Reset filters |
-| Summary row | Student count, average exam score, average attendance and average study hours |
-| Main area — left | Exam-score histogram |
-| Main area — right | School-type donut chart |
-| Bottom | Short findings and data-limitations note |
+### Layout
 
-### Design Decisions
+Four summary cards run across the top of the page.
 
-Summary cards will provide a quick introduction to the selected sample.
+The attendance chart is positioned on the left, with six student
+slicers arranged beneath it in two rows.
 
-The histogram will show student counts in ordered exam-score bands, including the retained score of 101.
+The feature importance chart occupies the centre-right area.
+A tall factor-selection slicer sits beside it on the far right.
 
-The donut chart will show school-type proportions with labels and percentages. Its small number of categories makes this format readable.
+### Summary Cards
 
-## Page 2 — Attendance & Study
+| Measure | Unfiltered value |
+| --- | --- |
+| Student Count | 6,607 |
+| Average Exam Score | 67.24 |
+| Average Attendance | 80.0% |
+| Average Study Hours | 20.0 |
 
-### Layout Sketch
+### Attendance Chart
 
-| Position | Planned content |
-|---|---|
-| Top | Title and navigation |
-| Filter row | Gender, Attendance and Study Hours slicers; Reset filters |
-| Upper area — left | Attendance versus exam score scatter plot |
-| Upper area — right | Brief chart explanations and factor-selection control |
-| Lower area — full width | Multiple-factor line chart |
+**Title:** Average Exam Score and Student Count  
+**Subtitle:** by Attendance
 
-### Attendance Scatter Plot
+This combination chart displays:
 
-- Horizontal axis: attendance (%).
-- Vertical axis: exam score in points.
-- Show individual observations with small, partly transparent markers.
-- Use tooltips to display attendance and exam score.
-- Preserve individual records when preparing the visual.
+- Light purple columns for average exam score.
+- A dark purple line for student count.
+- Attendance on the horizontal axis.
+- Separate vertical scales for exam score and student count.
 
-This chart will show the spread of results as well as the overall relationship.
+Showing both measures provides context for the average exam
+scores at different attendance levels.
 
-### Multiple-Factor Line Chart
+### Student Slicers
 
-**Title:** Student Factor Profiles by Exam-Score Band
+The six slicers beneath the attendance chart are:
 
-- Horizontal axis: ordered exam-score bands.
-- Vertical axis: average normalised factor value (0–100).
-- Separate coloured lines for:
-  - Attendance
-  - Hours Studied
-  - Sleep Hours
-  - Previous Scores
-  - Tutoring Sessions
-  - Physical Activity
-- Use visible markers and a clearly labelled legend.
-- Allow users to select which factors to display.
-- Tooltips will include the factor name, original-unit average, normalised average and student count.
+| Slicer | Options |
+| --- | --- |
+| Gender | Female, Male |
+| School Type | Private, Public |
+| Internet Access | No, Yes |
+| Learning Disabilities | No, Yes |
+| Peer Influence | Negative, Neutral, Positive |
+| Extracurricular Activities | No, Yes |
 
-Each factor will be scaled using its minimum and maximum in the full cleaned dataset:
+These controls support exploration of student-level measures.
+Their configured interactions should be checked during final testing.
 
-Normalised value = 100 × (value − minimum) / (maximum − minimum)
+### Feature Importance Chart
 
-Normalised values will then be averaged within each exam-score band. The scaling reference will remain fixed when filters change.
+**Title:** What Predicts Exam Performance?
 
-The scale compares relative factor levels. It does not represent percentage effect, importance or causation. Equal normalised values for different factors do not imply equal educational meaning.
+**Subtitle:** Model feature importance — use the factor selector
+to compare predictors.
 
-Lines connect ordered score bands, not points in time. Empty bands will not be displayed as zero, and tooltips will identify small groups.
+The horizontal bar chart displays model permutation importance,
+ordered from highest to lowest. Attendance and Hours Studied
+have the largest displayed importance values.
 
-The chart will use the full page width to keep six lines readable.
+**Horizontal axis:** Decrease in test R² (percentage points)
 
-## Page 3 — Resources & Support
+The values represent the average decrease in test R² when a
+predictor is shuffled, multiplied by 100 for readability.
+Permutation importance is calculated over 30 repeats.
 
-### Layout Sketch
+A displayed value of 20 means a decrease of 0.20 in test R².
+It does not represent a 20-mark increase in exam score or a
+20% share of total importance.
 
-| Position | Planned content |
-|---|---|
-| Top | Title and navigation |
-| Filter row | Family Income and Resource Access slicers; Reset filters |
-| Main area — left | Colour-shaded income/resource matrix |
-| Main area — right | Tutoring combination chart |
-| Bottom | Explanations and small-group warning |
+### Factor Selection
 
-### Colour-Shaded Matrix
+The **Choose factors** slicer contains checkboxes for individual
+predictors and a **Select all** option.
 
-- Rows: family income — Low, Medium, High.
-- Columns: resource access — Low, Medium, High.
-- Cell values: average exam score.
-- Cell shading: a consistent light-to-dark scale representing average score.
-- Tooltips: average score and student count.
-- Empty combinations will remain blank.
+It allows users to display selected factors together for comparison.
 
-The nine combinations will let users compare resource access and family income together. Printed values will support the colour shading.
+The importance values are imported model results. Student
+slicer selections do not retrain the model or recalculate these
+Python-generated values.
 
-Use a consistent colour scale under filtering so the same colour retains the same meaning.
+## Page 2 — Hypothesis Findings
 
-### Tutoring Combination Chart
+**Page heading:** What shapes exam performance?
 
-- Horizontal axis: tutoring-session count.
-- Purple columns: student count.
-- Teal line with markers: average exam score.
-- Left vertical axis: student count, starting at zero.
-- Right vertical axis: average exam score in points.
-- Tooltips: tutoring sessions, student count and average exam score.
+### Layout and Navigation
 
-The overlaid styles will show both the average result and how many students support it.
+Three buttons appear below the heading:
 
-Axes will be clearly labelled because counts and scores use different units. The heights of the columns and line are not directly comparable.
+- H1 · Attendance.
+- H2 · Tutoring.
+- H3 · Resources.
 
-A note will explain that averages for small groups, particularly at higher tutoring-session counts, can be unstable.
+Bookmarks switch between the three hypothesis views on the
+same report page.
 
-## Interactivity
+The selected button is highlighted in purple. Each view places
+a chart on the left and a **MAIN FINDING** panel on the right.
 
-- Slicers will update the relevant charts and summary cards.
-- Selecting chart elements will filter or highlight related visuals where meaningful.
-- Hover tooltips will provide values and group counts.
-- A factor selector will control the lines displayed in the factor-profile chart.
-- Navigation buttons will connect all three pages.
-- Reset buttons will restore each page's default view.
-- Each page's filters will apply to that page unless explicitly configured otherwise.
-- Filter controls and selection states will remain visible.
+### H1 — Attendance
 
-If reshaping data is needed for the factor-profile chart, student counts and other summaries must remain accurate and must not count repeated factor rows as additional students.
+**Chart title:** Attendance and predicted exam score
 
-## Storytelling and Interpretation
+A purple column chart shows predicted exam scores at attendance
+levels of 60, 70, 80, 90 and 100.
 
-- Use short explanations that connect charts to stakeholder questions.
-- Clearly label averages, counts, percentages and units.
-- Label fixed notebook findings as full-dataset findings.
-- Ensure descriptions remain accurate when filters change.
-- Identify dashboard comparisons as unadjusted descriptive results.
-- Distinguish them from the adjusted regression analyses in the hypothesis notebook.
-- Avoid causal language and claims about percentage influence.
-- Use the dashboard for exploration, not individual prediction or decisions about students.
+The displayed score labels are approximately 63, 65, 67, 69 and 71.
 
-## Data Limitations
+**Main finding:** +1.99 exam-score points
 
-- Retain the exam score of 101 consistently with the cleaned dataset and explain that its validity is uncertain.
-- Include student counts in tooltips because small groups can produce unstable averages.
-- Explain that filtering reduces the number of observations represented.
-- Do not assume the dataset represents all students or schools.
-- Explain that normalisation is a visual comparison method, not a measure of factor importance.
+The explanation states that this difference is associated with
+10 percentage points higher attendance, accounting for study
+hours and previous scores.
+
+### H2 — Tutoring
+
+**Chart title:** Tutoring and predicted exam scores
+
+**Subtitle:** Comparison at previous scores of 63, 75 and 88.
+
+A line chart compares predicted exam scores across zero to five
+tutoring sessions for three previous-score levels:
+
+- Previous score: 63
+- Previous score: 75
+- Previous score: 88
+
+The three coloured lines show similar upward patterns.
+
+**Main finding:** Similar tutoring patterns
+
+The accompanying explanation states that there is no clear
+evidence that the relationship between tutoring and exam scores
+varies with previous scores.
+
+**Displayed interaction p-value:** 0.805
+
+### H3 — Resources
+
+**Chart title:** Resource access and exam scores.
+
+**Subtitle:** Adjusted score difference vs low access.
+
+A purple column chart compares High and Medium resource access
+with the Low access reference group.
+
+| Resource access | Adjusted score difference versus Low |
+| --- | --- |
+| High | +1.84 points |
+| Medium | +0.88 points |
+
+**Main finding:** +1.84 exam-score points
+
+The explanation identifies this as the difference between High
+and Low resource access, accounting for family income and
+previous scores. A second statement reports the Medium versus
+Low difference of +0.88 points.
+
+### Interpretation
+
+This page presents the exported statistical findings.
+The bookmark buttons change the displayed hypothesis rather
+than rerunning the statistical models.
+
+Adjusted predictions and group differences are distinct from
+the descriptive averages used elsewhere in the dashboard.
+
+## Page 3 — Explore Performance
+
+**Page heading:** Explore Student Performance
+
+**Visual title:** Explore Exam Scores by Student Factors
+
+### Layout
+
+A single wide decomposition tree occupies the main area beneath
+the page heading.
+
+The small study-hours line chart has been removed, leaving the
+page focused on interactive exploration.
+
+### Analysed Measure
+
+The tree starts with the overall average exam score of **67.24**.
+
+Users can explore how this average differs across student groups
+by selecting branches and expanding additional factors.
+
+### Factors Shown in the Expanded View
+
+The supplied dashboard view contains these eight factors:
+
+1. Access to Resources
+2. Parental Involvement
+3. Motivation Level
+4. School Type
+5. Family Income
+6. Parental Education Level
+7. Teacher Quality
+8. Distance from Home
+
+Purple bars, connecting lines and bold selected labels show the
+current exploration path.
+
+### Interpretation
+
+Each additional split applies within the previously selected
+groups. Values further along the tree therefore describe a
+specific combination of student characteristics.
+
+The tree displays descriptive averages. It is not a visualisation
+of the trained prediction model and does not establish causation.
+
+## Page 4 — Correlations
+
+**Page heading:** Correlations Between Numerical Variables
+
+**Matrix title:** How Student Factors Correlate?
+
+**Subtitle:** Pearson correlation (r): −1 = negative,
+0 = no linear relationship, +1 = positive.
+
+### Layout
+
+A large matrix sits beneath the heading, with its title and
+explanatory subtitle directly above it.
+
+The matrix displays correlation coefficients to two decimal
+places and uses coloured cell backgrounds to show their strength
+and direction.
+
+### Variables and Order
+
+The same seven variables appear across the columns and down
+the rows in this order:
+
+1. Attendance
+2. Exam Score
+3. Hours Studied
+4. Physical Activity
+5. Previous Scores
+6. Sleep Hours
+7. Tutoring Sessions
+
+### Data Source
+
+The correlations are calculated in:
+
+`jupyter_notebooks/Student_Performance_EDA.ipynb`
+
+They are exported to:
+
+`data/processed/numerical_correlations.csv`
+
+The Power BI matrix uses:
+
+| Matrix area | Field |
+| --- | --- |
+| Rows | Row_Factor |
+| Columns | Column_Factor |
+| Values | Correlation |
+
+The exported table contains 49 variable pairs.
+
+### Formatting
+
+- Positive correlations use purple shading.
+- Values close to zero have pale, near-white backgrounds.
+- The diagonal displays 1.00 for each variable's correlation with itself.
+- Numerical labels remain visible inside the cells.
+- Row and column totals are removed.
+- Purple borders separate the matrix headers and cells.
+
+The colour scale is configured around −1, 0 and +1.
+
+### Displayed Relationships with Exam Score
+
+| Variable | Pearson correlation with Exam Score |
+| --- | --- |
+| Attendance | 0.58 |
+| Hours Studied | 0.45 |
+| Previous Scores | 0.18 |
+| Tutoring Sessions | 0.16 |
+| Physical Activity | 0.03 |
+| Sleep Hours | −0.02 |
+
+Attendance and Hours Studied show the strongest positive
+pairwise correlations with Exam Score among these variables.
+
+The matrix contains precomputed correlations. It does not
+recalculate subgroup correlations when student filters change.
+
+## Shared Visual Design
+
+The dashboard uses a consistent purple theme:
+
+- Dark purple banners with bold white page headings.
+- Pale backgrounds with soft purple and blue tones.
+- White chart and content areas.
+- Purple chart elements, borders and selected controls.
+- Rounded cards, slicer containers and navigation buttons.
+
+The four report tabs provide navigation between the pages.
+Within Hypothesis Findings, bookmark buttons provide navigation
+between the three statistical results.
+
+## Design Rationale
+
+The Overview provides a quick summary and predictor comparison.
+
+Hypothesis Findings keeps the statistical explanations together,
+using one chart and one main finding at a time to avoid crowding.
+
+Explore Performance gives the decomposition tree enough width
+for users to follow combinations of student characteristics.
+
+Correlations gives the numerical relationships a dedicated page
+with both values and colour shading.
+
+## Interpretation Boundaries
+
+The dashboard presents three different types of analytical output:
+
+- Descriptive averages summarise student groups.
+- Adjusted statistical results account for specified variables.
+- Permutation importance measures the fitted model's dependence
+  on predictors for test performance.
+
+Pearson correlations describe pairwise linear relationships.
+These measures answer different questions and should not be
+interpreted as interchangeable or causal.
 
 ## Final Checks
 
-- Confirm that each visual answers its planned stakeholder question.
-- Check readability, colour contrast, spacing, legends and number formatting.
-- Verify counts and averages against the cleaned dataset.
-- Check that score bands cover every retained observation.
-- Confirm that normalisation references remain fixed under filtering.
-- Test slicers, factor selection, chart interactions, tooltips, navigation and reset buttons.
-- Check empty selections and small groups.
-- Confirm that any reshaped data does not inflate student counts.
-- Ensure captions remain accurate under filtering.
+- Check that all three hypothesis buttons display the correct
+  chart, finding panel and selected-button colour.
+- Verify the student slicer interactions.
+- Test selecting and clearing factors in the importance chart.
+- Test expanding and changing decomposition tree branches.
+- Check displayed values against the notebook exports.
+- Check text readability and tooltips at normal viewing size.
+- Save the intended opening view for each page.
+- Save the PBIX file and commit the dashboard documentation.

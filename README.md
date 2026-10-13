@@ -200,6 +200,8 @@ Tasks are managed using a GitHub project board with
 
 [View the Student Performance project board](https://github.com/users/LieneRubule/projects/3)
 
+[View the detailed project roadmap](project_roadmap.md)
+
 Git commits record changes to notebooks, exported results,
 dashboard files and documentation.
 

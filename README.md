@@ -169,7 +169,7 @@ categorical predictor, with Low access as the reference group.
 
 These estimates account for family income and previous scores.
 
-![Access to resources finding](visualisations/H3_Resources.png)
+![H3 — Access to Resources](visualisations/h3_resources_corrected.png)
 
 ### Interpretation
 

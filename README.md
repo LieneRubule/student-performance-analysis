@@ -198,6 +198,8 @@ The project follows a staged workflow:
 Tasks are managed using a GitHub project board with
 **To Do**, **In Progress** and **Done** columns.
 
+[View the Student Performance project board](https://github.com/users/LieneRubule/projects/3)
+
 Git commits record changes to notebooks, exported results,
 dashboard files and documentation.
 
@@ -692,8 +694,10 @@ activate the hypothesis bookmark buttons.
 
 ## Deployment and Access
 
-The dashboard is provided as a Power BI Desktop `.pbix` file
-within the repository.
+[Download the Power BI dashboard](https://github.com/LieneRubule/student-performance-analysis/blob/main/powerbi/Student_Performance_Dashboard.pbix)
+
+Download the file and open it in Power BI Desktop to use the interactive features.
+
 
 This README does not currently claim a publicly hosted dashboard.
 A published report link can be added if online deployment is

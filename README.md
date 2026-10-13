@@ -346,6 +346,21 @@ by 100 for the dashboard and labelled:
 Importance values do not represent causal effects, changes
 in student marks or percentages that must total 100.
 
+#### How well does the model predict exam scores?
+
+To assess whether the model adds predictive value, linear regression was compared with a baseline that predicts the training-set mean exam score for every test student.
+
+| Model | MAE | RMSE | R² |
+|---|---:|---:|---:|
+| Mean baseline | 2.823 | 3.761 | -0.001 |
+| Linear regression | 0.450 | 1.803 | 0.770 |
+
+On the held-out test set, linear regression reduced the average absolute prediction error from approximately 2.82 to 0.45 exam-score points. Its R² of 0.770 indicates that it explained approximately 77% of the variation in test-set exam scores.
+
+The higher RMSE compared with MAE indicates that some predictions had substantially larger errors. This means the average error alone does not tell the whole story.
+
+These results demonstrate predictive value within this dataset and test split. They do not establish performance in other student populations or show that changing a predictor would cause exam scores to improve.
+
 #### Which factors does the prediction model rely on?
 
 After examining individual relationships, the next question

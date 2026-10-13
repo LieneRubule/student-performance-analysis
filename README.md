@@ -440,7 +440,7 @@ theme, pale backgrounds and white visual containers.
 
 ### 1. Overview
 
-**Heading:** Student Performance Overview
+## Student Performance Overview
 
 Four cards display the unfiltered reference values:
 
@@ -483,7 +483,7 @@ The factor selector controls which importance bars are shown.
 
 ### 2. Hypothesis Findings
 
-**Heading:** What shapes exam performance?
+## What shapes exam performance?
 
 Three bookmark buttons switch between:
 
@@ -500,7 +500,7 @@ without requiring three separate report pages.
 
 ### 3. Explore Performance
 
-**Heading:** Explore Student Performance
+## Explore Student Performance
 
 A wide decomposition tree displays **Average Exam Score**.
 
@@ -517,7 +517,7 @@ The overall average provides a starting point, but it can hide differences betwe
 
 ### 4. Correlations
 
-**Heading:** Correlations Between Numerical Variables
+## Correlations Between Numerical Variables
 
 A seven-by-seven matrix displays Pearson correlations for:
 

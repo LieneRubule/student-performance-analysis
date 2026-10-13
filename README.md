@@ -496,6 +496,10 @@ previously selected subgroup.
 The small study-hours line chart was removed during development
 to give the tree sufficient space and keep the page focused.
 
+The overall average provides a starting point, but it can hide differences between groups. The decomposition tree lets readers explore average exam scores across combinations of student characteristics. Each branch narrows the selected group, helping readers develop questions for further investigation. These comparisons are descriptive and do not establish why groups differ.
+
+![Explore Student Performance dashboard](visualisations/Explore_Student_Performance.png)
+
 ### 4. Correlations
 
 **Heading:** Correlations Between Numerical Variables

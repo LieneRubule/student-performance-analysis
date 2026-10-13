@@ -657,6 +657,22 @@ Potential improvements include:
 - Developing an optional Streamlit application for additional
   interactive analysis.
 
+  ## Project Structure
+
+| Folder or file | Purpose |
+| --- | --- |
+| `data/raw/` | Original dataset. |
+| `data/processed/` | Cleaned data and exported analytical results. |
+| `jupyter_notebooks/` | Notebooks for data preparation, exploratory analysis, hypothesis testing and machine learning. |
+| `powerbi/` | Power BI dashboard and dashboard planning documentation. |
+| `visualisations/` | Exported charts, interactive HTML visualisations and dashboard screenshots. |
+| `data_dictionary.md` | Variable definitions, units, categories and dataset limitations. |
+| `README.md` | Project overview, methods, findings and instructions. |
+| `requirements.txt` | Python dependencies. |
+| `.gitignore` | Files and folders excluded from version control. |
+
+The local `.venv/` folder contains the Python virtual environment and is excluded from version control.
+
 ## Running the Project
 
 ### Python Analysis
